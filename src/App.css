@@ -1,0 +1,55 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+.App{
+  background-color: rgb(49, 49, 58);
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Ropa Sans';
+}
+
+a{
+  text-decoration: none;
+}
+
+.OverlayContainer{
+  width: 100%;
+  min-height: 100vh;
+  z-index: 10000;
+  position: fixed;
+  display: block;
+  padding: 5rem;
+  top: 0;
+  background: rgba(0, 0, 0, 0.801);
+}
+
+.OverlayImage{
+  top: 0;
+  object-fit: scale-down;
+  min-height: 70vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position: center;
+  pointer-events: none;
+}
+
+.OverlayImage::after{
+  content: '(X)';
+  font-size: max(1.5vw, 1rem);
+  font-weight: bolder;
+  line-height: 1.5;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(54, 54, 54);
+  padding: 10px;
+  background-color: rgb(199, 206, 206);
+  border-radius: 10%;
+  width: max-content;
+}
